@@ -1,11 +1,12 @@
 DECLARE
 
-    v_ssn EMPLOYEE.SSN%TYPE;
+    v_phone EMPLOYEES.PHONE_NUMBER%TYPE;
 
 BEGIN
-	SELECT SSN INTO v_ssn FROM EMPLOYEE WHERE NAME_TXT = 'SMITH ROBERT K';
+    SELECT PHONE_NUMBER INTO v_phone FROM EMPLOYEE WHERE EMPLOYEE_ID = 100;
 	
-	dbms_output.put_line( 'NUMBER ROWS RETURNED (should be one) : ' || sql%ROWCOUNT);
+    --there should only be one row returned because I am using primary key 
+    dbms_output.put_line( 'NUMBER ROWS : ' || sql%ROWCOUNT);
 
 END;
 /
