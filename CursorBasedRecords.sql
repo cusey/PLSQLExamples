@@ -1,9 +1,18 @@
+--OUTPUT
+/*
+Steven King SKING
+Neena Kochhar NKOCHHAR
+Lex De Haan LDEHAAN
+Alexander Hunold AHUNOLD
+Bruce Ernst BERNST
+*/
+
 DECLARE 
    CURSOR c_employees is 
       SELECT 
             FIRST_NAME  || ' ' || LAST_NAME as name , 
             EMAIL 
-      FROM EMPLOYEES WHERE EMPLOYEE_ID > 105; 
+      FROM EMPLOYEES WHERE EMPLOYEE_ID < 105; 
       
    employees_record c_employees%rowtype; 
 BEGIN 
